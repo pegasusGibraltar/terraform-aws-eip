@@ -1,10 +1,12 @@
 resource "aws_eip" "eip" {
-    vpc = var.vpc
+  count = var.eip_count
 
-    instance = var.instance
-    network_interface = var.network_interface
-    associate_with_private_ip = var.associate_with_private_ip
-    tags = var.tags
+  vpc = var.vpc
 
-    public_ipv4_pool = var.public_ipv4_pool
+  instance = var.instance
+  network_interface = var.network_interface
+  associate_with_private_ip = var.associate_with_private_ip
+  tags = var.tags
+
+  public_ipv4_pool = var.public_ipv4_pool
 }

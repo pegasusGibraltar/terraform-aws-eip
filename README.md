@@ -1,3 +1,3 @@
-# AWS IAM Policies Terraform Module
+# Terraform module that creates AWS Elastic IPs
 
-Very simple module to create an AWS Elastic IP.
+A very simple module to create AWS Elastic IPs.
